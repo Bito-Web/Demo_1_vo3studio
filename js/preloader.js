@@ -1,8 +1,8 @@
-window.addEventListener('load', () => {
-    document.querySelector('.preloader').style.display = 'none';
-    document.querySelectorAll('.load').style.display = 'block';
-    document.querySelectorAll('.load').style.visibility = 'visible';
-})
+// window.addEventListener('load', () => {
+//     document.querySelector('.preloader').style.display = 'none';
+//     document.querySelectorAll('.load').style.display = '';
+//     document.querySelectorAll('.load').style.visibility = 'visible';
+// })
 
 var img = document.querySelectorAll('.img');
 var img_link = document.querySelectorAll('.img_link');

@@ -55,13 +55,12 @@
                     z-index: 1;
                 }
             </style>
-
         </head>
         <body>
-            <section class="preloader">
+            <!-- <section class="preloader">
                 <iframe src="https://i.gifer.com/2cOP.gif"></iframe>
-            </section>
-            <section class="preheader load">
+            </section> -->
+            <section class="preheader">
                 <div class="preheader__search">
                     <form method="GET" action="?results">
                         <input type="text" placeholder="Search product"/>
@@ -83,7 +82,7 @@
                     </a>
                 </div>
             </section>
-            <header class="load">
+            <header class="">
                 <div class="header">
                     <nav class="header__nav">
                         <a href="?item_1">Item 1</a>
@@ -102,12 +101,12 @@
                     </nav>
                 </div>
             </header>
-            <section class="postheader load">
+            <section class="postheader">
                 <h4>Little Business Description</h4>
                 <h2>Slogan or Product Description</h2>
                 <a href="?anywhere" target="_blank"><h4>Link to anywhere ></h4></a>
             </section>
-            <section class="section_1 load">
+            <section class="section_1">
                 <div>
                     <a class="img" href="?anywhere" target="_blank" style="background-image: url('https://picsum.photos/id/20/1080/1920');">
                         <h4 class="img_link">Link to anywhere ></h4>
@@ -120,7 +119,7 @@
                     </a>
                 </div>
             </section>
-            <section class="section_2 load">
+            <section class="section_2">
                 <div>
                     <h3>ABOUT</h3>
                     <a class="img" href="?anywhere" target="_blank" style="background-image: url('https://picsum.photos/id/23/1920/1080');">
@@ -131,7 +130,7 @@
                     </a>
                 </div>
             </section>
-            <section class="section_3 load">
+            <section class="section_3">
                 <div>
                     <p>GET YOUR OWN</p>
                     <h3>FREE RECIPE EBOOK!</h3>
@@ -144,7 +143,7 @@
 
                 </div>
             </section>
-            <section class="section_4 load">
+            <section class="section_4">
                 <div>
                     <h3>RECIPES</h3>
                     <div class="row_1">
@@ -171,22 +170,30 @@
                     </div>
                 </div>
             </section>
-            <footer>
-                <div>
-                    <div class="footer__social-networks">
-                        <a target="_blank" href="?cart-shoppping">
-                            <i class="fa-solid fa-cart-shopping"></i>
-                        </a>
-                        <a target="_blank" href="?facebook">
-                            <i class="fa-brands fa-facebook"></i>
-                        </a>
-                        <a target="_blank" href="?twitter">
-                            <i class="fa-brands fa-twitter"></i>
-                        </a>
-                        <a target="_blank" href="?instagram">
-                            <i class="fa-brands fa-instagram"></i>
-                        </a>
-                    </div>
+            <footer class="footer">
+                <div class="footer__search">
+                    <form method="GET" action="?results">
+                        <input type="text" placeholder="Search product"/>
+                        <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    </form>
+                </div>
+                <div class="footer__social-networks">
+                    <a target="_blank" href="?facebook">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+                    <a target="_blank" href="?twitter">
+                        <i class="fa-brands fa-twitter"></i>
+                    </a>
+                    <a target="_blank" href="?instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                </div>
+                <div class="footer__subscribe">
+                    <h4>Enter your email here *</h4>
+                    <form method="POST" action="?sendEmail">
+                        <input placeholder="Your email" type="email"/>
+                        <button type="submit">SEND</button>
+                    </form>
                 </div>
             </footer>
 
@@ -263,6 +270,7 @@
             <script src='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js' integrity='sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg==' crossorigin='anonymous'></script>
             <!-- JS -->
             <script src='./js/slick.js'></script>
+            
             <script src='./js/preloader.js'></script>
         </body>
     </html>

@@ -13,13 +13,14 @@ body {
   background-image: url("https://picsum.photos/id/6/1920/1080");
   background-position: top center;
   background-repeat: no-repeat;
-  background-size: 100% auto;
+  background-size: 100% 100%;
   background-attachment: fixed;
   /*Componentes*/
 }
 
 body h1 {
   font-size: 3rem;
+  font-weight: bold;
 }
 
 @media (max-width: 768px) {
@@ -30,6 +31,7 @@ body h1 {
 
 body h2 {
   font-size: 2.5rem;
+  font-weight: 600;
 }
 
 @media (max-width: 768px) {
@@ -40,6 +42,7 @@ body h2 {
 
 body h3 {
   font-size: 2rem;
+  font-weight: 600;
 }
 
 @media (max-width: 768px) {
@@ -50,6 +53,7 @@ body h3 {
 
 body h4 {
   font-size: 1.5rem;
+  font-weight: 400;
 }
 
 @media (max-width: 768px) {
@@ -60,6 +64,7 @@ body h4 {
 
 body span, body p, body a, body button {
   font-size: 1rem;
+  font-weight: 300;
 }
 
 @media (max-width: 768px) {
@@ -96,7 +101,6 @@ body .preheader {
   padding: 0.5rem 10%;
   width: 100%;
   min-height: 8vh;
-  display: block;
   position: fixed;
   top: 0;
   z-index: 1;
@@ -166,9 +170,13 @@ body .preheader__search form input {
 body .preheader__search form button {
   width: 50px;
   border: none;
-  background-color: none;
+  background-color: transparent;
   padding: 0.25rem;
   outline: none;
+}
+
+body .preheader__search form button .fa-solid.fa-magnifying-glass {
+  color: inherit;
 }
 
 body .preheader__search form button:hover {
@@ -247,7 +255,7 @@ body header .header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 @media (max-width: 768px) {
@@ -264,8 +272,8 @@ body header .header__nav {
   text-align: center;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(100px, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
 }
 
 @media (max-width: 768px) {
@@ -384,8 +392,8 @@ body .section_1 div {
   display: -ms-grid;
   display: grid;
   gap: 15px;
-  -ms-grid-columns: (calc(100% / 3))[3];
-      grid-template-columns: repeat(3, calc(100% / 3));
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
 }
 
 @media (max-width: 768px) {
@@ -663,8 +671,8 @@ body .section_4 div .row_1 {
   display: -ms-grid;
   display: grid;
   gap: 15px;
-  -ms-grid-columns: (minmax(calc(25% - 45px), 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(calc(25% - 45px), 1fr));
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
 @media (max-width: 768px) {
@@ -726,8 +734,8 @@ body .section_4 div .row_2 {
   display: -ms-grid;
   display: grid;
   gap: 15px;
-  -ms-grid-columns: (minmax(33%, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(33%, 1fr));
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
 }
 
 @media (max-width: 768px) {
@@ -781,5 +789,165 @@ body .section_4 div .row_2 a .img_link.show {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+body .footer {
+  margin: 0 auto;
+  padding: 4rem 10%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 768px) {
+  body .footer {
+    padding: 0.5rem;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+body .footer__search form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (max-width: 768px) {
+  body .footer__search form {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+body .footer__search form input {
+  width: 200px;
+  font-size: 1rem;
+  padding: 0.25rem 0.5rem;
+  border: none;
+  background-color: #ffffff;
+  border-radius: 0.5rem;
+  outline: none;
+}
+
+body .footer__search form button {
+  width: 50px;
+  border: none;
+  background-color: transparent;
+  padding: 0.25rem;
+  outline: none;
+}
+
+body .footer__search form button .fa-solid.fa-magnifying-glass {
+  color: #ffffff;
+}
+
+body .footer__search form button:hover {
+  opacity: 0.5;
+}
+
+body .footer__social-networks {
+  padding: 1rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (max-width: 768px) {
+  body .footer__social-networks {
+    padding: 0.5rem;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+body .footer__social-networks a {
+  text-align: center;
+  width: 50px;
+}
+
+body .footer__social-networks a .fa-solid,
+body .footer__social-networks a .fa-brands {
+  text-align: center;
+  width: 50px;
+  color: white;
+}
+
+body .footer__social-networks a:hover {
+  opacity: 0.5;
+}
+
+body .footer__subscribe {
+  width: 50%;
+  margin: 0 auto;
+}
+
+body .footer__subscribe h4 {
+  text-align: center;
+  padding: 0 0 1rem;
+  color: #ffffff;
+}
+
+body .footer__subscribe form input {
+  padding: 0.5rem;
+  border: none;
+  outline: none;
+  background-color: white;
+  border-radius: 0.5rem;
+}
+
+body .footer__subscribe form input::-webkit-input-placeholder {
+  text-align: center;
+}
+
+body .footer__subscribe form input:-ms-input-placeholder {
+  text-align: center;
+}
+
+body .footer__subscribe form input::-ms-input-placeholder {
+  text-align: center;
+}
+
+body .footer__subscribe form input::placeholder {
+  text-align: center;
+}
+
+body .footer__subscribe form button {
+  color: #ffffff;
+  padding: 0.5rem;
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+
+body .load {
+  display: none;
+  visibility: hidden;
 }
 /*# sourceMappingURL=styles.css.map */
