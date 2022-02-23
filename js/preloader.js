@@ -8,7 +8,7 @@ window.addEventListener("load", () => {
     var header = document.querySelector(".header");
     var section_5_item_title = document.querySelectorAll('.section_5__item__title');
     var section_5_item_content = document.querySelectorAll('.section_5__item__content');
-    var fas = document.querySelectorAll('.fas .fa-chevron-down');
+    var fas = document.querySelectorAll('.fas');
 
     // Change style with scroll
     window.addEventListener("scroll", () => {
@@ -59,11 +59,11 @@ window.addEventListener("load", () => {
             section_5_item_content[index].classList.toggle('showFaqs');
 
             if (section_5_item_content[index].classList.contains('showFaqs')) {
-                fas[index].classList.add('fa-chevron-up');
                 fas[index].classList.remove('fa-chevron-down');
+                fas[index].classList.add('fa-chevron-up');
             }else {
-                fas[index].classList.add('fa-chevron-down');
                 fas[index].classList.remove('fa-chevron-up');
+                fas[index].classList.add('fa-chevron-down');
             }
         });
     });
