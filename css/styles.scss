@@ -531,6 +531,62 @@ body {
             }
         }
     }
+    .section_5 {
+        padding: 4rem 0;
+        background-color: #ffffff;
+        &__title {
+                margin: 0 auto;
+                padding: 0 0 1rem;
+                display: block;
+                width: 80%;
+                text-align: center;
+        }
+        &__item {
+            margin: 0 auto;
+            padding: 0;
+            display: block;
+            width: 80%;
+            border-top: 1px solid #777;
+            &:last-of-type {
+                border-bottom: 1px solid #777;
+            }
+            &__title {
+                margin: 0;
+                padding: 0.5rem;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                h3 {
+                    margin: 0;
+                    padding: 0;
+                }
+                .fas {
+                    text-align: right;
+                    margin: 0;
+                    width: 50px;
+                    padding: 0;
+                    color: #555555;
+                }
+            }
+            &__content {
+                margin: 0;
+                padding: 1rem 2rem;
+                height: 0;
+                display: none;
+                transition: all 1s ease;
+                &.showFaqs {
+                    height: auto;
+                    display: block;
+                    transition: all 1s ease;
+                }
+                p {
+                    margin: 0;
+                    padding: 0;
+                }
+            }
+        }
+    }
     .footer {
         margin: 0 auto;
         padding: 4rem 10%;
