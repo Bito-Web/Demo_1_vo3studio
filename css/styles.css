@@ -62,13 +62,48 @@ body h4 {
   }
 }
 
-body span, body p, body a, body button {
+body span, body p, body a, body button, body input, body textarea {
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+
+@media (max-width: 768px) {
+  body span, body p, body a, body button, body input, body textarea {
+    font-size: 0.9rem;
+  }
+}
+
+body span::-webkit-input-placeholder, body p::-webkit-input-placeholder, body a::-webkit-input-placeholder, body button::-webkit-input-placeholder, body input::-webkit-input-placeholder, body textarea::-webkit-input-placeholder {
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+body span:-ms-input-placeholder, body p:-ms-input-placeholder, body a:-ms-input-placeholder, body button:-ms-input-placeholder, body input:-ms-input-placeholder, body textarea:-ms-input-placeholder {
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+body span::-ms-input-placeholder, body p::-ms-input-placeholder, body a::-ms-input-placeholder, body button::-ms-input-placeholder, body input::-ms-input-placeholder, body textarea::-ms-input-placeholder {
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+body span::placeholder, body p::placeholder, body a::placeholder, body button::placeholder, body input::placeholder, body textarea::placeholder {
   font-size: 1rem;
   font-weight: 300;
 }
 
 @media (max-width: 768px) {
-  body span, body p, body a, body button {
+  body span::-webkit-input-placeholder, body p::-webkit-input-placeholder, body a::-webkit-input-placeholder, body button::-webkit-input-placeholder, body input::-webkit-input-placeholder, body textarea::-webkit-input-placeholder {
+    font-size: 0.75rem;
+  }
+  body span:-ms-input-placeholder, body p:-ms-input-placeholder, body a:-ms-input-placeholder, body button:-ms-input-placeholder, body input:-ms-input-placeholder, body textarea:-ms-input-placeholder {
+    font-size: 0.75rem;
+  }
+  body span::-ms-input-placeholder, body p::-ms-input-placeholder, body a::-ms-input-placeholder, body button::-ms-input-placeholder, body input::-ms-input-placeholder, body textarea::-ms-input-placeholder {
+    font-size: 0.75rem;
+  }
+  body span::placeholder, body p::placeholder, body a::placeholder, body button::placeholder, body input::placeholder, body textarea::placeholder {
     font-size: 0.75rem;
   }
 }
@@ -100,8 +135,9 @@ body .preheader {
   margin: 0 auto;
   padding: 0.5rem 10%;
   width: 100%;
-  min-height: 8vh;
-  position: fixed;
+  min-height: 50px;
+  position: -webkit-sticky;
+  position: sticky;
   top: 0;
   z-index: 1;
   display: -webkit-box;
@@ -122,6 +158,7 @@ body .preheader {
 
 @media (max-width: 768px) {
   body .preheader {
+    min-height: 100px;
     padding: 0.5rem;
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
@@ -229,14 +266,15 @@ body header {
   width: 100%;
   min-height: auto;
   display: block;
-  position: fixed;
-  top: 8vh;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 50px;
   z-index: 1;
 }
 
 @media (max-width: 768px) {
   body header {
-    top: 11vh;
+    top: 100px;
   }
 }
 
@@ -244,7 +282,7 @@ body header .header {
   margin: 0 auto;
   padding: 0.5rem 0;
   width: 100%;
-  min-height: 12vh;
+  min-height: 75px;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 1fr 1fr;
@@ -255,14 +293,12 @@ body header .header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: rgba(0, 0, 0, 0.5);
 }
 
 @media (max-width: 768px) {
   body header .header {
     -ms-grid-columns: 1fr 2fr 1fr;
         grid-template-columns: 1fr 2fr 1fr;
-    background-color: black;
     padding: 0.5rem;
   }
 }
@@ -287,7 +323,6 @@ body header .header__nav a {
   text-align: center;
   color: #ffffff;
   text-decoration: none;
-  font-weight: 500;
 }
 
 @media (max-width: 768px) {
@@ -327,7 +362,7 @@ body .postheader {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  height: 100vh;
+  height: 400px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -339,10 +374,11 @@ body .postheader {
 
 @media (max-width: 768px) {
   body .postheader {
-    height: 50vh;
+    height: 200px;
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: flex-end;
+    padding-bottom: 2rem;
   }
 }
 
@@ -360,7 +396,6 @@ body .postheader a {
 body .postheader a h4 {
   display: block;
   color: #ffffff;
-  font-weight: 600;
 }
 
 body .postheader a:hover {
@@ -370,7 +405,6 @@ body .postheader a:hover {
 body .postheader h4 {
   display: block;
   color: #ffffff;
-  font-weight: 600;
 }
 
 body .section_1 {
