@@ -48,6 +48,9 @@ window.addEventListener("load", () => {
             e.preventDefault();
             img_link[index].classList.remove("show");
         });
+        img_link[index].addEventListener("click", () => {
+            alert('\nFor now the link is empty :(\n\nBut thanks for watch our job!')
+        })
     });
     // Open and close Faqs
     section_5_item_title.forEach((element, index) => {
