@@ -834,6 +834,17 @@ body .section_5__title h3 {
   text-align: center;
 }
 
+body .section_5__items {
+  margin: 0 auto;
+  width: 80%;
+}
+
+@media (max-width: 768px) {
+  body .section_5__items {
+    width: 100%;
+  }
+}
+
 body .section_5__items__item {
   max-width: 300px;
   -webkit-box-shadow: 0 0 0.25rem rgba(0, 0, 0, 0.3);
