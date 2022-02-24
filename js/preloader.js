@@ -22,15 +22,15 @@ window.addEventListener("load", () => {
         var mobile = Boolean (window.innerWidth <= 768 ? true : false);
         if(mobile) {
             if (y >= 200) {
-                header.style.backgroundColor = "rgba(0,0,0,0.5)";
+                header.style.backgroundColor = "rgba(0,0,0,0.7)";
             }else {
-                header.style.backgroundColor = "rgba(0,0,0,0)";
+                header.style.backgroundColor = "rgba(0,0,0,0.3)";
             }
         }else {
             if (y >= 300) {
-                header.style.backgroundColor = "rgba(0,0,0,0.5)";
+                header.style.backgroundColor = "rgba(0,0,0,0.7)";
             }else {
-                header.style.backgroundColor = "rgba(0,0,0,0)";
+                header.style.backgroundColor = "rgba(0,0,0,0.3)";
             }
 
         }
