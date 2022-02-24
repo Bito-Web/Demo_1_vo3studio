@@ -546,7 +546,6 @@ body {
                 width: 100%;
             }
             &__item {
-                max-width: 300px;
                 box-shadow: 0 0 0.25rem rgba(0,0,0,0.3);
                 background-color: #ffffff;
                 margin: 2rem 1rem;
@@ -597,6 +596,21 @@ body {
                     }
 
                 }
+            }
+            .slick-arrow::before {
+                font-size: 50px;
+                color: #000000;
+            }
+            .slick-arrow {
+                width: 50px;
+                height: 50px;
+            }
+            .slick-next.slick-arrow {
+                right: -50px;
+            }
+            .slick-prev.slick-arrow {
+                left: -50px;
+                z-index: 1;
             }
             .slick-dots {
                 position: unset;
@@ -650,13 +664,12 @@ body {
             &__content {
                 margin: 0;
                 padding: 1rem 2rem;
-                height: 0;
+                height: 0%;
                 display: none;
-                transition: all 1s ease;
                 &.showFaqs {
-                    height: auto;
                     display: block;
-                    transition: all 1s ease;
+                    height: 100%;
+                    transition: height 1s ease-in-out;
                 }
                 p {
                     margin: 0;
