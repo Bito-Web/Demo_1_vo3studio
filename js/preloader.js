@@ -37,26 +37,30 @@ window.addEventListener("load", () => {
     });
     // Show link in img with hover
     img.forEach((element, index) => {
-        element.addEventListener("mouseenter", (e) => {
-            e.preventDefault();
-            img_link[index].classList.add("show");
-            header.style.display = "none";
-        });
-        element.addEventListener("mouseleave", (e) => {
-            e.preventDefault();
-            img_link[index].classList.remove("show");
-            header.style.display = "";
-        });
-        element.addEventListener("touchstart", (e) => {
-            e.preventDefault();
-            img_link[index].classList.add("show");
-            header.style.display = "none";
-        });
-        element.addEventListener("touchend", (e) => {
-            e.preventDefault();
-            img_link[index].classList.remove("show");
-            header.style.display = "";
-        });
+        var y = window.scrollY;
+        var mobile = Boolean (window.innerWidth <= 768 ? true : false);
+        if (mobile) {
+            element.addEventListener("touchmove", () => {
+                img_link[index].classList.add("show");
+                header.style.display = "none";
+            }, false);
+            element.addEventListener("touchend", () => {
+                img_link[index].classList.remove("show");
+                header.style.display = "";
+            }, false);
+        }else {
+            element.addEventListener("mouseenter", () => {
+                img_link[index].classList.add("show");
+                y = window.scrollY;
+                if (y > 300) {
+                    header.style.display = "none";
+                }
+            });
+            element.addEventListener("mouseleave", () => {
+                img_link[index].classList.remove("show");
+                header.style.display = "";
+            });
+        }
         img_link[index].addEventListener("click", () => {
             alert("\nFor now the link is empty :(\n\nBut thanks for watch our job!")
         })
@@ -74,6 +78,7 @@ window.addEventListener("load", () => {
             header.style.display = "none";
         });
         element.addEventListener("mouseleave", () => {
+            console.log('display: none');
             header.style.display = "";
         });
     });
@@ -90,7 +95,7 @@ window.addEventListener("load", () => {
                 setTimeout(() => {
                     warning_text.textContent = "To see the menu, close the Faq Item";
                     pop_up.style.display = 'block';
-                }, 1000);
+                }, 0);
                 setTimeout(() => {
                     warning_text.textContent = "";
                     pop_up.style.display = 'none';
@@ -115,6 +120,8 @@ window.addEventListener("load", () => {
         element.addEventListener("click", (e) => {
             e.preventDefault()
             pop_up.style.display = "block";
+            pop_up.style.top = "50%";
+            pop_up.style.bottom = "unset";
             pop_up.style.left = "25px";
             pop_up.style.right = "unset";
             pop_up.style.backgroundColor = "rgba(38, 161, 38, 0.9)";
@@ -122,6 +129,8 @@ window.addEventListener("load", () => {
             warning_text.textContent = "Thanks for your buy!!!";
             setTimeout(() => {
                 pop_up.style.display = 'none';
+                pop_up.style.top = "unset";
+                pop_up.style.bottom = "25px";
                 pop_up.style.left = "unset";
                 pop_up.style.right = "";
                 pop_up.style.transform = "unset";
