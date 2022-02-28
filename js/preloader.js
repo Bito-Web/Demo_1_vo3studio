@@ -1,5 +1,5 @@
 window.addEventListener("load", () => {
-//     document.querySelector(".preloader").style.display = "none";
+    document.querySelector(".preloader").style.display = "none";
 //     document.querySelectorAll(".load").style.display = "";
 //     document.querySelectorAll(".load").style.visibility = "visible";
 
