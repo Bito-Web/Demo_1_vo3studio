@@ -1,47 +1,64 @@
 * {
-    margin: 0 auto;
+    margin: 0;
     padding: 0;
     width: 100%;
     box-sizing: border-box;
-    color: #555;
-    
+    font-family: 'Zilla Slab', serif;
+    color: #767767;
     scroll-behavior: smooth;
 }
 body {
+    margin: 0 auto;
+    max-width: 1336px;
     /*Estilos por default*/
     h1 {
         font-size: 3rem;
         font-weight: bold;
+        @media (max-width: 1024px) {
+            font-size: 2.5rem;
+        }
         @media (max-width: 768px) {
-            font-size: 2rem;
+            font-size: 2.25rem;
         }
     }
     h2 {
         font-size: 2.5rem;
         font-weight: 600;
-        @media (max-width: 768px) {
+        @media (max-width: 1024px) {
             font-size: 2rem;
+        }
+        @media (max-width: 768px) {
+            font-size: 1.75rem;
         }
     }
     h3 {
-        font-size: 2rem;
-        font-weight: 600;
+        font-size: 2.25rem;
+        font-weight: 500;
+        @media (max-width: 1024px) {
+            font-size: 1.75rem;
+        }
         @media (max-width: 768px) {
             font-size: 1.5rem;
         }
     }
     h4 {
-        font-size: 1.5rem;
+        font-size: 1.75rem;
         font-weight: 400;
+        @media (max-width: 1024px) {
+            font-size: 1.5rem;
+        }
         @media (max-width: 768px) {
-            font-size: 1rem;
+            font-size: 1.25rem;
         }
     }
     span, p, a, button, input, textarea {
-        font-size: 1.2rem;
+        font-size: 1.5rem;
         font-weight: 300;
+        @media (max-width: 1024px) {
+            font-size: 1.25rem;
+        }
         @media (max-width: 768px) {
-            font-size: 0.9rem;
+            font-size: 1rem;
         }
         &::placeholder {
             font-size: 1rem;
@@ -162,6 +179,34 @@ body {
         @media (max-width: 768px) {
             top: 100px;
         }
+        .header-mobile-button {
+            margin: 0 auto;
+            padding: 1rem 0;
+            display: none;
+            width: 100%;
+            min-height: 25px;
+            background-color: rgba(0,0,0,0.3);
+            @media (max-width: 768px) {
+                display: block;
+            }
+            .header-btn {
+                margin: 0 auto;
+                display: block;
+                text-align: center;
+                width: 100%;
+                color: white;
+                font-size: 25px;
+                transition: all 0.5s ease-in-out;
+                &::before {
+                    margin: 0 auto;
+                    display: block;
+                    text-align: center;
+                    width: 100%;
+                    color: white;
+                    font-size: 25px;
+                }
+            }        
+        }
         .header {
             margin: 0 auto;
             padding: 0.5rem 0;
@@ -173,8 +218,10 @@ body {
             align-items: center;
             background-color: rgba(0,0,0,0.3);
             @media (max-width: 768px) {
-                grid-template-columns: 1fr 2fr 1fr;
+                grid-template-columns: 1fr 1fr;
                 padding: 0.5rem;
+                display: none;
+                height: 0px;
             }
             &__nav {
                 margin: 0 auto;
@@ -211,6 +258,15 @@ body {
                         font-weight: 700;
                     }
                 }
+                @media (max-width: 768px) {
+                    display: none;
+                }
+            }
+            &.show {
+                border-top: 1px solid white;
+                display: grid;
+                height: auto;
+                transition: all 1s ease-in-out;
             }
         }
     }

@@ -15,6 +15,8 @@ window.addEventListener("load", () => {
     var close_icon = document.querySelector(".close_icon");
     var warning_text = document.querySelector(".warning-text");
     var btn_buy = document.querySelectorAll(".btn_buy");
+    var header_btn = document.querySelector(".header-btn");
+    var header_mobile_btn = document.querySelector(".header-mobile-button");
 
     // Change style with scroll
     window.addEventListener("scroll", () => {
@@ -23,42 +25,46 @@ window.addEventListener("load", () => {
         if(mobile) {
             if (y >= 200) {
                 header.style.backgroundColor = "rgba(0,0,0,0.7)";
+                header_mobile_btn.style.backgroundColor = "rgba(0,0,0,0.7)";
             }else {
                 header.style.backgroundColor = "rgba(0,0,0,0.3)";
+                header_mobile_btn.style.backgroundColor = "rgba(0,0,0,0.3)";
             }
         }else {
             if (y >= 300) {
                 header.style.backgroundColor = "rgba(0,0,0,0.7)";
+                header_mobile_btn.style.backgroundColor = "rgba(0,0,0,0.7)";
             }else {
                 header.style.backgroundColor = "rgba(0,0,0,0.3)";
+                header_mobile_btn.style.backgroundColor = "rgba(0,0,0,0.3)";
             }
 
         }
     });
     // Show link in img with hover
     img.forEach((element, index) => {
-        var y = window.scrollY;
+        // var y = window.scrollY;
         var mobile = Boolean (window.innerWidth <= 768 ? true : false);
         if (mobile) {
             element.addEventListener("touchmove", () => {
                 img_link[index].classList.add("show");
-                header.style.display = "none";
+                // header.style.display = "none";
             }, false);
             element.addEventListener("touchend", () => {
                 img_link[index].classList.remove("show");
-                header.style.display = "";
+                // header.style.display = "";
             }, false);
         }else {
             element.addEventListener("mouseenter", () => {
                 img_link[index].classList.add("show");
-                y = window.scrollY;
-                if (y > 300) {
-                    header.style.display = "none";
-                }
+                // y = window.scrollY;
+                // if (y > 300) {
+                //     header.style.display = "none";
+                // }
             });
             element.addEventListener("mouseleave", () => {
                 img_link[index].classList.remove("show");
-                header.style.display = "";
+                // header.style.display = "";
             });
         }
         img_link[index].addEventListener("click", () => {
@@ -67,19 +73,18 @@ window.addEventListener("load", () => {
     });
     // Hidde or Show menu when mouse enter or leave cards
     section_5.addEventListener("mouseenter", () => {
-        header.style.display = "none";
+        // header.style.display = "none";
     });
     section_5.addEventListener("mouseleave", () => {
-        header.style.display = "";
+        // header.style.display = "";
     });
     // Hidde or Show menu when mouse enter or leave inputs
     inputs.forEach(element => {
         element.addEventListener("mouseenter", () => {
-            header.style.display = "none";
+            // header.style.display = "none";
         });
         element.addEventListener("mouseleave", () => {
-            console.log('display: none');
-            header.style.display = "";
+            // header.style.display = "";
         });
     });
     // Open and close Faqs
@@ -91,7 +96,7 @@ window.addEventListener("load", () => {
             if (section_6_item_content[index].classList.contains("showFaqs")) {
                 fas[index].classList.remove("fa-chevron-down");
                 fas[index].classList.add("fa-chevron-up");
-                header.style.display = "none";
+                // header.style.display = "none";
                 setTimeout(() => {
                     warning_text.textContent = "To see the menu, close the Faq Item";
                     pop_up.style.display = 'block';
@@ -104,7 +109,7 @@ window.addEventListener("load", () => {
                 fas[index].classList.remove("fa-chevron-up");
                 fas[index].classList.add("fa-chevron-down");
                 pop_up.style.display = 'none';
-                header.style.display = "";
+                // header.style.display = "";
                 warning_text.textContent = "";
             }
         });
@@ -140,4 +145,17 @@ window.addEventListener("load", () => {
             }, 5000);
         })
     });
+    // Show menu mobile
+    header_mobile_btn.addEventListener("click", (e) => {
+        e.preventDefault();
+        header.classList.toggle("show");
+        if(header.classList.contains("show")) {
+            console.log(header_btn);
+            header_btn.style.transform = "rotate(90deg)";
+            
+        }else {
+            console.log(header_btn);
+            header_btn.style.transform = "rotate(0deg)";
+        }
+    })
 });
