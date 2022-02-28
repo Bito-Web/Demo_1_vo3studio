@@ -94,8 +94,8 @@ window.addEventListener("load", () => {
             section_6_item_content[index].classList.toggle("showFaqs");
 
             if (section_6_item_content[index].classList.contains("showFaqs")) {
-                fas[index].classList.remove("fa-chevron-down");
-                fas[index].classList.add("fa-chevron-up");
+                fas[index].style.transform = "rotateX(180deg)";
+                // fas[index].style.transition = "all 0.5s ease-in-out";
                 // header.style.display = "none";
                 setTimeout(() => {
                     warning_text.textContent = "To see the menu, close the Faq Item";
@@ -106,8 +106,8 @@ window.addEventListener("load", () => {
                     pop_up.style.display = 'none';
                 }, 7000);
             }else {
-                fas[index].classList.remove("fa-chevron-up");
-                fas[index].classList.add("fa-chevron-down");
+                fas[index].style.transform = "rotateX(0deg)";
+                // fas[index].style.transition = "all 0.5s ease-in-out";
                 pop_up.style.display = 'none';
                 // header.style.display = "";
                 warning_text.textContent = "";
@@ -150,11 +150,9 @@ window.addEventListener("load", () => {
         e.preventDefault();
         header.classList.toggle("show");
         if(header.classList.contains("show")) {
-            console.log(header_btn);
             header_btn.style.transform = "rotate(90deg)";
             
         }else {
-            console.log(header_btn);
             header_btn.style.transform = "rotate(0deg)";
         }
     })

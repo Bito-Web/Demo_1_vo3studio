@@ -7,9 +7,18 @@
     color: #767767;
     scroll-behavior: smooth;
 }
+
+/*
+320px — 480px: Mobile devices
+481px — 768px: iPads, Tablets ***
+769px — 1024px: Small screens, laptops ***
+1025px — 1200px: Desktops, large screens
+1201px and more —  Extra large screens, TV
+*/
+
 body {
     margin: 0 auto;
-    max-width: 1336px;
+    max-width: 1920px;
     /*Estilos por default*/
     h1 {
         font-size: 3rem;
@@ -206,7 +215,8 @@ body {
                 margin: 0 auto;
                 display: block;
                 text-align: center;
-                width: 100%;
+                width: 25px;
+                height: 25px;
                 color: white;
                 font-size: 25px;
                 transition: all 0.5s ease-in-out;
@@ -214,7 +224,8 @@ body {
                     margin: 0 auto;
                     display: block;
                     text-align: center;
-                    width: 100%;
+                    width: 25px;
+                    height: 25px;
                     color: white;
                     font-size: 25px;
                 }
@@ -234,7 +245,6 @@ body {
                 grid-template-columns: 1fr 1fr;
                 padding: 0.5rem;
                 display: none;
-                height: 0px;
             }
             &__nav {
                 margin: 0 auto;
@@ -278,7 +288,6 @@ body {
             &.show {
                 border-top: 1px solid white;
                 display: grid;
-                height: auto;
                 transition: all 1s ease-in-out;
             }
         }
@@ -724,20 +733,19 @@ body {
                 .fas {
                     text-align: right;
                     margin: 0;
+                    font-size: 1rem;
                     width: 50px;
                     padding: 0;
                     color: #555555;
+                    transition: all 0.5s ease-in-out;
                 }
             }
             &__content {
                 margin: 0;
                 padding: 1rem 2rem;
-                height: 0%;
                 display: none;
                 &.showFaqs {
                     display: block;
-                    height: 100%;
-                    transition: height 1s ease-in-out;
                 }
                 p {
                     margin: 0;
@@ -851,20 +859,34 @@ body {
         right: 25px;
         background-color: rgba(0,0,0,0.7);
         display: none;
+        z-index: 10;
         .warning-text {
             font-size: 1rem;
             padding: 1rem;
             color: #ffffff;
             position: relative;
+            z-index: 15;
         }
         .close_icon {
-            width: 25px;
-            height: 25px;
             color: rgb(226, 55, 55);
             position: absolute;
             display: block;
-            top: -15%;
-            right: -7%;
+            font-size: 1.5rem;
+            width: 1rem;
+            height: 1rem;
+            top: -1rem;
+            right: -1rem;
+            font-size: 1rem;
+            &::before {
+                color: rgb(226, 55, 55);
+                display: block;
+                font-size: 1.5rem;
+                width: 1rem;
+                height: 1rem;
+                top: -1rem;
+                right: -1rem;
+                font-size: 1rem;
+            }
         }
     }
     .load {
