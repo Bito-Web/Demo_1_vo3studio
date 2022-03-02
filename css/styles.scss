@@ -19,6 +19,11 @@
 body {
     margin: 0 auto;
     max-width: 1920px;
+    &.load {
+        overflow: hidden;
+        width: 100vw;
+        height: 100vh;
+    }
     /*Estilos por default*/
     h1 {
         font-size: 3rem;
@@ -294,6 +299,7 @@ body {
     }
     .postheader {
         margin: auto;
+        padding: 0;
         display: flex;
         flex-direction: column;
         height: 400px;
@@ -303,11 +309,14 @@ body {
         @media (max-width: 768px) {
             height: 200px;
             justify-content: flex-end;
-            padding-bottom: 2rem;
+            padding: 1rem 0;
         }
         h2 {
             display: block;
             color: #ffffff;
+            @media (max-width: 768px) {
+                padding: 0 1rem;
+            }
         }
         a {
             padding: 1rem 0;
@@ -888,9 +897,5 @@ body {
                 font-size: 1rem;
             }
         }
-    }
-    .load {
-        display: none;
-        visibility: hidden;
     }
 }

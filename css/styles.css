@@ -29,6 +29,12 @@ body {
   /*Componentes*/
 }
 
+body.load {
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+}
+
 body h1 {
   font-size: 3rem;
   font-weight: bold;
@@ -477,6 +483,7 @@ body header .header.show {
 
 body .postheader {
   margin: auto;
+  padding: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -500,13 +507,19 @@ body .postheader {
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: flex-end;
-    padding-bottom: 2rem;
+    padding: 1rem 0;
   }
 }
 
 body .postheader h2 {
   display: block;
   color: #ffffff;
+}
+
+@media (max-width: 768px) {
+  body .postheader h2 {
+    padding: 0 1rem;
+  }
 }
 
 body .postheader a {
@@ -1326,10 +1339,5 @@ body .pop-up .close_icon::before {
   top: -1rem;
   right: -1rem;
   font-size: 1rem;
-}
-
-body .load {
-  display: none;
-  visibility: hidden;
 }
 /*# sourceMappingURL=styles.css.map */

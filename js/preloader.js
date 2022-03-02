@@ -1,13 +1,19 @@
 window.addEventListener("load", () => {
+    var isPageReloaded = Boolean (window.performance.navigation.TYPE_RELOAD);
+    if (isPageReloaded == true) {
+        window.onbeforeunload = function () {
+            window.scrollTo(0,0);
+        }
+    }
     document.querySelector(".preloader").style.display = "none";
-//     document.querySelectorAll(".load").style.display = "";
-//     document.querySelectorAll(".load").style.visibility = "visible";
+    document.querySelector("body").classList.remove("load");
 
     var img = document.querySelectorAll(".img");
     var img_link = document.querySelectorAll(".img_link");
     var header = document.querySelector(".header");
-    var inputs = document.querySelectorAll(".inputs");
-    var section_5 = document.querySelector(".section_5");
+    var header_tag = document.querySelector("header");
+    // var inputs = document.querySelectorAll(".inputs");
+    // var section_5 = document.querySelector(".section_5");
     var section_6_item_title = document.querySelectorAll(".section_6__item__title");
     var section_6_item_content = document.querySelectorAll(".section_6__item__content");
     var fas = document.querySelectorAll(".fas");
@@ -26,15 +32,19 @@ window.addEventListener("load", () => {
             if (y >= 200) {
                 header.style.backgroundColor = "rgba(0,0,0,0.7)";
                 header_mobile_btn.style.backgroundColor = "rgba(0,0,0,0.7)";
+                header_tag.style.zIndex = "1";
             }else {
+                header_tag.style.zIndex = "0";
                 header.style.backgroundColor = "rgba(0,0,0,0.3)";
                 header_mobile_btn.style.backgroundColor = "rgba(0,0,0,0.3)";
             }
         }else {
             if (y >= 300) {
+                header_tag.style.zIndex = "1";
                 header.style.backgroundColor = "rgba(0,0,0,0.7)";
                 header_mobile_btn.style.backgroundColor = "rgba(0,0,0,0.7)";
             }else {
+                header_tag.style.zIndex = "0";
                 header.style.backgroundColor = "rgba(0,0,0,0.3)";
                 header_mobile_btn.style.backgroundColor = "rgba(0,0,0,0.3)";
             }
@@ -70,22 +80,6 @@ window.addEventListener("load", () => {
         img_link[index].addEventListener("click", () => {
             alert("\nFor now the link is empty :(\n\nBut thanks for watch our job!")
         })
-    });
-    // Hidde or Show menu when mouse enter or leave cards
-    section_5.addEventListener("mouseenter", () => {
-        // header.style.display = "none";
-    });
-    section_5.addEventListener("mouseleave", () => {
-        // header.style.display = "";
-    });
-    // Hidde or Show menu when mouse enter or leave inputs
-    inputs.forEach(element => {
-        element.addEventListener("mouseenter", () => {
-            // header.style.display = "none";
-        });
-        element.addEventListener("mouseleave", () => {
-            // header.style.display = "";
-        });
     });
     // Open and close Faqs
     section_6_item_title.forEach((element, index) => {
