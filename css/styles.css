@@ -335,6 +335,123 @@ body .preheader__social-networks a:hover {
   opacity: 0.5;
 }
 
+body .countdown {
+  margin: 0 auto;
+  padding: 4rem 0;
+  width: 100%;
+  min-height: 80vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 1024px) {
+  body .countdown {
+    padding: 3rem 0;
+  }
+}
+
+@media (max-width: 768px) {
+  body .countdown {
+    padding: 2rem 0;
+  }
+}
+
+body .countdown__background {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("https://www.wordzz.com/wp-content/uploads/2018/12/Happy-new-year-hd.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-filter: blur(0.5rem);
+          filter: blur(0.5rem);
+  z-index: -10;
+}
+
+body .countdown__items {
+  margin: 0 auto;
+  padding: 1rem 0;
+  width: 50%;
+  display: -ms-grid;
+  display: grid;
+  gap: 1rem;
+  -ms-grid-columns: (minmax(20%, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(20%, 1fr));
+  z-index: 0;
+}
+
+@media (max-width: 1024px) {
+  body .countdown__items {
+    gap: 0.5rem;
+    width: 60%;
+  }
+}
+
+@media (max-width: 768px) {
+  body .countdown__items {
+    gap: 0.5rem;
+    width: 95%;
+  }
+}
+
+body .countdown__items div {
+  margin: auto;
+  padding: 0.5rem 0;
+  border: none;
+  background-color: #ffffff;
+  border-radius: 0.25rem;
+  -webkit-box-shadow: 0 0 0.5rem black;
+          box-shadow: 0 0 0.5rem black;
+}
+
+body .countdown__items div h2, body .countdown__items div p {
+  text-align: center;
+}
+
+body .countdown__message {
+  padding: 1rem 0;
+  z-index: 0;
+}
+
+body .countdown__message h2 {
+  color: white;
+  text-align: center;
+  text-shadow: 0 0 0.25rem black;
+  padding: 0 0 1rem;
+}
+
+body .countdown__message p {
+  text-align: center;
+  color: #ffffff;
+  font-style: italic;
+  font-size: 95%;
+  text-shadow: 0 0 0.25rem black;
+}
+
+body .countdown__message p span {
+  text-align: center;
+  color: #ffffff;
+  font-size: 100%;
+  font-style: normal;
+  font-weight: bold;
+  text-shadow: 0 0 0.25rem black;
+}
+
 body header {
   margin: 0 auto;
   padding: 0;

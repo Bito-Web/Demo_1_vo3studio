@@ -194,6 +194,90 @@ body {
             }
         }
     }
+    .countdown {
+        margin: 0 auto;
+        padding: 4rem 0;
+        width: 100%;
+        min-height: 80vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        background-color: rgba(0,0,0,0.3);
+        // backdrop-filter: blur(5px);
+        @media (max-width: 1024px) {
+            padding: 3rem 0;
+        }
+        @media (max-width: 768px) {
+            padding: 2rem 0;
+        }
+        &__background {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("https://www.wordzz.com/wp-content/uploads/2018/12/Happy-new-year-hd.jpg");
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            filter: blur(0.5rem);
+            z-index: -10;
+        }
+        &__items {
+            margin: 0 auto;
+            padding: 1rem 0;
+            width: 50%;
+            display: grid;
+            gap: 1rem;
+            grid-template-columns: repeat(auto-fit, minmax(20%, 1fr));
+            z-index: 0;
+            @media (max-width: 1024px) {
+                gap: 0.5rem;
+                width: 60%;
+            }
+            @media (max-width: 768px) {
+                gap: 0.5rem;
+                width: 95%;
+            }
+            div {
+                margin: auto;
+                padding: 0.5rem 0;
+                border: none;
+                background-color: #ffffff;
+                border-radius: 0.25rem;
+                box-shadow: 0 0 0.5rem black;
+                h2,p {
+                    text-align: center;
+                }
+            }
+        }
+        &__message {
+            padding: 1rem 0;
+            z-index: 0;
+            h2 {
+                color: white;
+                text-align: center;
+                text-shadow: 0 0 0.25rem black;
+                padding: 0 0 1rem;
+            }
+            p {
+                text-align: center;
+                color: #ffffff;
+                font-style: italic;
+                font-size: 95%;
+                text-shadow: 0 0 0.25rem black;
+                span {
+                    text-align: center;
+                    color: #ffffff;
+                    font-size: 100%;
+                    font-style: normal;
+                    font-weight: bold;
+                    text-shadow: 0 0 0.25rem black;
+                }
+            }
+        }
+    }
     header {
         margin: 0 auto;
         padding: 0;
