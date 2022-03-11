@@ -1227,11 +1227,13 @@ body .section_6__item__title {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  cursor: pointer;
 }
 
 body .section_6__item__title h3 {
   margin: 0;
   padding: 0;
+  cursor: pointer;
 }
 
 body .section_6__item__title .fas {
@@ -1243,6 +1245,7 @@ body .section_6__item__title .fas {
   color: #555555;
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
+  cursor: pointer;
 }
 
 body .section_6__item__content {

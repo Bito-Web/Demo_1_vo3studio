@@ -90,11 +90,19 @@ window.addEventListener("load", () => {
 
             if (section_6_item_content[index].classList.contains("showFaqs")) {
                 fas[index].style.transform = "rotateX(180deg)";
-                // fas[index].style.transition = "all 0.5s ease-in-out";
-                // header.style.display = "none";
+                var secondPopUp = 7;
                 setTimeout(() => {
-                    warning_text.textContent = "To see the menu, close the Faq Item";
-                    pop_up.style.display = 'block';
+
+                    if (pop_up.style.display != 'block') {
+                        pop_up.style.display = 'block';
+                        warning_text.textContent = "This Pop-Up will disappear in 7 seconds...";
+                        setInterval(() => {
+                            if(secondPopUp > 0) {
+                                secondPopUp--;
+                                warning_text.textContent = `This Pop-Up will disappear in ${secondPopUp} seconds...`;
+                            }
+                        }, 1000)
+                    }
                 }, 0);
                 setTimeout(() => {
                     warning_text.textContent = "";
@@ -102,9 +110,7 @@ window.addEventListener("load", () => {
                 }, 7000);
             }else {
                 fas[index].style.transform = "rotateX(0deg)";
-                // fas[index].style.transition = "all 0.5s ease-in-out";
                 pop_up.style.display = 'none';
-                // header.style.display = "";
                 warning_text.textContent = "";
             }
         });
@@ -223,9 +229,9 @@ window.addEventListener("load", () => {
     // BG Color Generator
     const colors = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, "A", "B", "C", "D", "E", "F"];
     const section_8_items = document.querySelector('.section_8');
-    const btn = document.querySelector('.section_8__items__item .btn');
     const color = document.querySelector('.section_8__items__item .color');
-
+    const btn = document.querySelector('.section_8__items__item .btn');
+    
     btn.addEventListener('click', () => {
         //Asignar "#" cada vez que se ejecuta el click
         let hex = '#';

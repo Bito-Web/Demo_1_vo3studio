@@ -819,9 +819,11 @@ body {
                 flex-direction: row;
                 justify-content: space-between;
                 align-items: center;
+                cursor: pointer;
                 h3 {
                     margin: 0;
                     padding: 0;
+                    cursor: pointer;
                 }
                 .fas {
                     text-align: right;
@@ -831,6 +833,7 @@ body {
                     padding: 0;
                     color: #555555;
                     transition: all 0.5s ease-in-out;
+                    cursor: pointer;
                 }
             }
             &__content {
