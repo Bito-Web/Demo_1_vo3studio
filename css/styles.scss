@@ -847,6 +847,82 @@ body {
             }
         }
     }
+    .section_8 {
+        margin: 0 auto;
+        padding: 4rem 0;
+        width: 100%;
+        @media (max-width: 768px) {
+            padding: 2rem 0;
+        }
+        h2 {
+            text-align: center;
+            padding: 0;
+            color: white;
+            text-shadow: 0 0 0.5rem black;
+        }
+        &__items {
+            margin: 0 auto;
+            padding: 3rem 0;
+            width: 100%;
+            display: block;
+            justify-content: center;
+            align-items: center;
+            &__item {
+                margin: 0 auto;
+                padding: 1rem;
+                width: 50%;
+                display: block;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                background-color: #4A295C;
+                border: none;
+                border-radius: 0.25rem;
+                @media (max-width: 768px) {
+                    width: 80%;
+                }
+                h3 {
+                    padding: 0 0.5rem 1rem 0;
+                    color: white;
+                    font-size: 2rem;
+                    text-transform: capitalize;
+                    font-weight: 500;
+                    span {
+                        padding: 0 0 1rem 0.5rem;
+                        color: lightblue;
+                        font-size: 1.5rem;
+                        text-transform: uppercase;
+                        font-weight: 300;
+                        letter-spacing: 0.25px;
+                    }
+                }
+                button {
+                    margin: 0 auto;
+                    padding: 0.5rem;
+                    display: block;
+                    width: 50%;
+                    border: 2px solid white;
+                    outline: none;
+                    border-radius: 0.25rem;
+                    background-color: transparent;
+                    color: white;
+                    font-size: 1rem;
+                    text-transform: uppercase;
+                    &:hover {
+                        background-color: white;
+                        color: #4A295C;
+                    }
+                    &:active {
+                        background-color: #4A295C;
+                        color: white;
+                    }
+                    @media (max-width: 768px) {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
     .footer {
         margin: 0 auto;
         padding: 4rem 10%;

@@ -1260,6 +1260,108 @@ body .section_6__item__content p {
   padding: 0;
 }
 
+body .section_8 {
+  margin: 0 auto;
+  padding: 4rem 0;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  body .section_8 {
+    padding: 2rem 0;
+  }
+}
+
+body .section_8 h2 {
+  text-align: center;
+  padding: 0;
+  color: white;
+  text-shadow: 0 0 0.5rem black;
+}
+
+body .section_8__items {
+  margin: 0 auto;
+  padding: 3rem 0;
+  width: 100%;
+  display: block;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .section_8__items__item {
+  margin: 0 auto;
+  padding: 1rem;
+  width: 50%;
+  display: block;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  background-color: #4A295C;
+  border: none;
+  border-radius: 0.25rem;
+}
+
+@media (max-width: 768px) {
+  body .section_8__items__item {
+    width: 80%;
+  }
+}
+
+body .section_8__items__item h3 {
+  padding: 0 0.5rem 1rem 0;
+  color: white;
+  font-size: 2rem;
+  text-transform: capitalize;
+  font-weight: 500;
+}
+
+body .section_8__items__item h3 span {
+  padding: 0 0 1rem 0.5rem;
+  color: lightblue;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  font-weight: 300;
+  letter-spacing: 0.25px;
+}
+
+body .section_8__items__item button {
+  margin: 0 auto;
+  padding: 0.5rem;
+  display: block;
+  width: 50%;
+  border: 2px solid white;
+  outline: none;
+  border-radius: 0.25rem;
+  background-color: transparent;
+  color: white;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+body .section_8__items__item button:hover {
+  background-color: white;
+  color: #4A295C;
+}
+
+body .section_8__items__item button:active {
+  background-color: #4A295C;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  body .section_8__items__item button {
+    width: 100%;
+  }
+}
+
 body .footer {
   margin: 0 auto;
   padding: 4rem 10%;

@@ -151,6 +151,7 @@ window.addEventListener("load", () => {
             header_btn.style.transform = "rotate(0deg)";
         }
     })
+    // Countdown
     function countdown() {
         // Set the end time
         var countDownDate = new Date("December 31, 2022 23:59:59").getTime();
@@ -219,4 +220,27 @@ window.addEventListener("load", () => {
             }
         }, 1000);
     }
+    // BG Color Generator
+    const colors = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, "A", "B", "C", "D", "E", "F"];
+    const section_8_items = document.querySelector('.section_8');
+    const btn = document.querySelector('.section_8__items__item .btn');
+    const color = document.querySelector('.section_8__items__item .color');
+
+    btn.addEventListener('click', () => {
+        //Asignar "#" cada vez que se ejecuta el click
+        let hex = '#';
+        for (let i = 0; i < 6; i++) {
+            //Sumarle al hex "#" los seis valores aleatorios
+            hex += colors[getRandomNumber()];
+        }
+        //Cambiar estilos y contenido luego del obtener los 6 valores aleatorios
+        color.textContent = hex;
+        section_8_items.style.backgroundColor = hex;
+    })
+
+    //Recorrer colors y retornar un index aleatorio
+    function getRandomNumber() {
+        return Math.floor(Math.random() * colors.length);
+    }
+
 });
